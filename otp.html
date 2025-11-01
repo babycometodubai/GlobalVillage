@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التذاكر | القرية العالمية</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="paymentStyle.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- =====================
+        HEADER SECTION
+  ====================== -->
+  <header class="global-header">
+    <div class="header-left">
+      <button id="menu-btn" class="menu-btn"><i class="fa fa-bars"></i></button>
+      <button class="header-btn partner-btn">انضموا إلى قائمة شركائنا</button>
+    </div>
+
+    <div class="header-right">
+      <div class="header-logo">
+        <img src="images/logo_ar.svg" alt="القرية العالمية" />
+      </div>
+    </div>
+  </header>
+
+
+<!-- ==========================
+     PROGRESS BAR SECTION
+========================== -->
+<div class="progress-bar">
+  <div class="progress-step active">
+    <div class="icon"><i class="fa fa-user"></i></div>
+    <p>معلومات الضيف</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-shopping-cart"></i></div>
+    <p>تفاصيل المشتريات</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-credit-card"></i></div>
+    <p>تفاصيل الدفع</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-award"></i></div>
+    <p>التأكيد</p>
+  </div>
+</div>
+
+
+  <!-- ==========================
+       PAYMENT FORM
+  =========================== -->
+  <main class="payment-container">
+
+   <section class="otp-box">
+  <div class="otp-header">
+    <div class="otp-brand">
+      <img src="images/allCardd.png" alt="MasterCard" class="otp-card-logo" />
+    </div>
+    <span class="otp-idcheck">ID Check</span>
+    <button class="otp-cancel">Cancel</button>
+  </div>
+
+  <hr class="otp-line" />
+
+  <div class="otp-content">
+    <h2>Mobile Verification</h2>
+    <p>We have sent a text message containing a verification code to your registered mobile number</p>
+    <p>
+      You are making a payment to <strong>Global Village Dubai</strong> for an amount of 
+      <strong id="total-amount"></strong> 
+      on <strong id="current-date"></strong>
+    </p>
+
+    <div class="otp-input-group">
+      <input type="text" id="otp-code" maxlength="6" placeholder="Enter the verification code" />
+      
+    </div>
+
+    <button class="otp-confirm">Confirm</button>
+    <button class="otp-resend">Resend Code</button>
+  </div>
+</section>
+
+
+  </main>
+<footer class="global-footer">
+  <div class="footer-top">
+    <p class="season-dates">
+      <span class="highlight">الموسم الـ30</span> | 15 أكتوبر 2025 - 10 مايو 2026
+    </p>
+    <p class="season-hours">
+      من <strong>الأحد إلى الأربعاء:</strong> 4:00 مساءً - 12:00 صباحاً |
+      <strong>من الخميس إلى السبت:</strong> 4:00 مساءً - 1:00 صباحاً
+      <br />
+      <span class="note">الثلاثاء مخصص للسيدات والعائلات، باستثناء الأيام الموافقة للعطلات الرسمية</span>
+    </p>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-column">
+      <h3>روابط سريعة</h3>
+      <ul>
+        <li>عن القرية العالمية</li>
+        <li>المدونة</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الشركات</h3>
+      <ul>
+        <li>بوابة الشركاء</li>
+        <li>للأعمال</li>
+        <li>لتجارة السفر</li>
+        <li>وسائل الإعلام</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الدعم</h3>
+      <ul>
+        <li>تواصل معنا</li>
+        <li>الشروط والأحكام</li>
+        <li>سياسة الخصوصية</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-line"></div>
+  <p class="footer-copy">© 2025 القرية العالمية. جميع الحقوق محفوظة.</p>
+</footer>
+  <script src="paymentScript.js"></script>
+</body>
+</html>

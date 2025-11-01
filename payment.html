@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التذاكر | القرية العالمية</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="paymentStyle.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- =====================
+        HEADER SECTION
+  ====================== -->
+  <header class="global-header">
+    <div class="header-left">
+  <button id="menu-btn" class="menu-btn">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <button class="header-btn partner-btn">انضموا إلى قائمة شركائنا</button>
+
+  <button class="btn-cart" id="cart-btn" title="سلة المشتريات">
+    <img src="images/cart7.png" alt="Cart" class="cart-icon" />
+    <span class="cart-count" id="cart-count">0</span>
+  </button>
+</div>
+
+    <div class="header-right">
+      <div class="header-logo">
+        <img src="images/logo_ar.svg" alt="القرية العالمية" />
+      </div>
+    </div>
+  </header>
+
+
+<!-- ==========================
+     PROGRESS BAR SECTION
+========================== -->
+<div class="progress-bar">
+  <div class="progress-step active">
+    <div class="icon"><i class="fa fa-user"></i></div>
+    <p>معلومات الضيف</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-shopping-cart"></i></div>
+    <p>تفاصيل المشتريات</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-credit-card"></i></div>
+    <p>تفاصيل الدفع</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-award"></i></div>
+    <p>التأكيد</p>
+  </div>
+</div>
+
+
+  <!-- ==========================
+       PAYMENT FORM
+  =========================== -->
+  <main class="payment-container">
+    <div class="payment-box">
+      <h2 class="form-title">معلومات الضيف</h2>
+      <p class="form-subtitle">يرجى إدخال المعلومات أدناه، سوف نرسل التذاكر عبر البريد الإلكتروني.</p>
+
+      <form id="payment-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="email">البريد الإلكتروني <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="firstName">الاسم <span>*</span></label>
+            <input type="text" id="firstName" name="firstName" placeholder="الاسم" required autocomplete="given-name" />
+          </div>
+
+  <div class="form-group phone-group">
+  <label for="phone">رقم الهاتف <span>*</span></label>
+  <div class="phone-field">
+    <select id="countryCode" name="countryCode" required>
+      <!-- 🌍 GCC COUNTRIES -->
+      <option value="+971">+971 🇦🇪 الإمارات</option>
+      <option value="+966">+966 🇸🇦 السعودية</option>
+      <option value="+965">+965 🇰🇼 الكويت</option>
+      <option value="+974">+974 🇶🇦 قطر</option>
+      <option value="+968">+968 🇴🇲 عمان</option>
+      <option value="+973">+973 🇧🇭 البحرين</option>
+
+      <!-- 🌍 LEVANT & NORTH AFRICA -->
+      <option value="+962">+962 🇯🇴 الأردن</option>
+      <option value="+961">+961 🇱🇧 لبنان</option>
+      <option value="+963">+963 🇸🇾 سوريا</option>
+      <option value="+20">+20 🇪🇬 مصر</option>
+      <option value="+249">+249 🇸🇩 السودان</option>
+      <option value="+212">+212 🇲🇦 المغرب</option>
+      <option value="+213">+213 🇩🇿 الجزائر</option>
+      <option value="+216">+216 🇹🇳 تونس</option>
+      <option value="+218">+218 🇱🇾 ليبيا</option>
+
+      <!-- 🌍 SOUTH ASIA -->
+      <option value="+91">+91 🇮🇳 الهند</option>
+      <option value="+92">+92 🇵🇰 باكستان</option>
+      <option value="+880">+880 🇧🇩 بنغلاديش</option>
+      <option value="+94">+94 🇱🇰 سريلانكا</option>
+      <option value="+977">+977 🇳🇵 نيبال</option>
+
+      <!-- 🌍 EAST ASIA -->
+      <option value="+86">+86 🇨🇳 الصين</option>
+      <option value="+81">+81 🇯🇵 اليابان</option>
+      <option value="+82">+82 🇰🇷 كوريا الجنوبية</option>
+      <option value="+63">+63 🇵🇭 الفلبين</option>
+      <option value="+60">+60 🇲🇾 ماليزيا</option>
+      <option value="+62">+62 🇮🇩 إندونيسيا</option>
+      <option value="+65">+65 🇸🇬 سنغافورة</option>
+      <option value="+84">+84 🇻🇳 فيتنام</option>
+
+      <!-- 🌍 AFRICA -->
+      <option value="+254">+254 🇰🇪 كينيا</option>
+      <option value="+234">+234 🇳🇬 نيجيريا</option>
+      <option value="+256">+256 🇺🇬 أوغندا</option>
+      <option value="+255">+255 🇹🇿 تنزانيا</option>
+      <option value="+27">+27 🇿🇦 جنوب أفريقيا</option>
+
+      <!-- 🌍 EUROPE -->
+      <option value="+44">+44 🇬🇧 المملكة المتحدة</option>
+      <option value="+33">+33 🇫🇷 فرنسا</option>
+      <option value="+49">+49 🇩🇪 ألمانيا</option>
+      <option value="+39">+39 🇮🇹 إيطاليا</option>
+      <option value="+34">+34 🇪🇸 إسبانيا</option>
+      <option value="+7">+7 🇷🇺 روسيا</option>
+      <option value="+380">+380 🇺🇦 أوكرانيا</option>
+      <option value="+90">+90 🇹🇷 تركيا</option>
+
+      <!-- 🌍 AMERICAS -->
+      <option value="+1">+1 🇺🇸 الولايات المتحدة</option>
+      <option value="+1">+1 🇨🇦 كندا</option>
+      <option value="+55">+55 🇧🇷 البرازيل</option>
+      <option value="+52">+52 🇲🇽 المكسيك</option>
+
+      <!-- 🌍 AUSTRALIA & OCEANIA -->
+      <option value="+61">+61 🇦🇺 أستراليا</option>
+      <option value="+64">+64 🇳🇿 نيوزيلندا</option>
+    </select>
+
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      placeholder="xxxxxxxxx"
+      required
+    />
+  </div>
+</div>
+
+
+          <div class="form-group">
+  <label for="country">بلد الإقامة <span>*</span></label>
+  <select id="country" name="country" required>
+    <option value="">اختر بلد الإقامة</option>
+
+    <!-- 🌍 الخليج العربي -->
+    <option>الإمارات العربية المتحدة</option>
+    <option>المملكة العربية السعودية</option>
+    <option>الكويت</option>
+    <option>قطر</option>
+    <option>البحرين</option>
+    <option>سلطنة عمان</option>
+
+    <!-- 🌍 الشرق الأوسط وشمال أفريقيا -->
+    <option>الأردن</option>
+    <option>لبنان</option>
+    <option>سوريا</option>
+    <option>فلسطين</option>
+    <option>العراق</option>
+    <option>مصر</option>
+    <option>المغرب</option>
+    <option>الجزائر</option>
+    <option>تونس</option>
+    <option>ليبيا</option>
+    <option>السودان</option>
+
+    <!-- 🌍 آسيا -->
+    <option>الهند</option>
+    <option>باكستان</option>
+    <option>بنغلاديش</option>
+    <option>سريلانكا</option>
+    <option>النيبال</option>
+    <option>إندونيسيا</option>
+    <option>ماليزيا</option>
+    <option>سنغافورة</option>
+    <option>الفلبين</option>
+    <option>الصين</option>
+    <option>اليابان</option>
+    <option>كوريا الجنوبية</option>
+    <option>تايلاند</option>
+    <option>فيتنام</option>
+
+    <!-- 🌍 أوروبا -->
+    <option>المملكة المتحدة</option>
+    <option>فرنسا</option>
+    <option>ألمانيا</option>
+    <option>إيطاليا</option>
+    <option>إسبانيا</option>
+    <option>البرتغال</option>
+    <option>اليونان</option>
+    <option>هولندا</option>
+    <option>بلجيكا</option>
+    <option>السويد</option>
+    <option>النرويج</option>
+    <option>سويسرا</option>
+    <option>النمسا</option>
+    <option>بولندا</option>
+    <option>تركيا</option>
+    <option>روسيا</option>
+    <option>أوكرانيا</option>
+
+    <!-- 🌍 أفريقيا -->
+    <option>جنوب أفريقيا</option>
+    <option>كينيا</option>
+    <option>نيجيريا</option>
+    <option>أوغندا</option>
+    <option>غانا</option>
+    <option>إثيوبيا</option>
+    <option>تنزانيا</option>
+    <option>الكونغو</option>
+    <option>المغرب</option>
+    <option>تونس</option>
+    <option>الجزائر</option>
+    <option>ليبيا</option>
+    <option>مصر</option>
+
+    <!-- 🌍 الأمريكيتان -->
+    <option>الولايات المتحدة الأمريكية</option>
+    <option>كندا</option>
+    <option>البرازيل</option>
+    <option>الأرجنتين</option>
+    <option>المكسيك</option>
+    <option>تشيلي</option>
+    <option>كولومبيا</option>
+    <option>بيرو</option>
+
+    <!-- 🌍 أوقيانوسيا -->
+    <option>أستراليا</option>
+    <option>نيوزيلندا</option>
+    <option>فيجي</option>
+    <option>بابوا غينيا الجديدة</option>
+
+    <!-- 🌍 أوروبا الشرقية وآسيا الوسطى -->
+    <option>كازاخستان</option>
+    <option>أوزبكستان</option>
+    <option>أذربيجان</option>
+    <option>أرمينيا</option>
+    <option>جورجيا</option>
+
+    <!-- 🌍 دول أخرى -->
+    <option>إيران</option>
+    <option>أفغانستان</option>
+    <option>إسرائيل</option>
+    <option>اليمن</option>
+    <option>موريتانيا</option>
+    <option>الصومال</option>
+    <option>جزر القمر</option>
+    <option>مالطا</option>
+    <option>قبرص</option>
+    <option>المالديف</option>
+  </select>
+</div>
+
+
+        <div class="checkboxes">
+          <label for="terms">
+            <input type="checkbox" id="terms" required />
+            أوافق على <a href="#">البنود والشروط</a> الخاصة بالقرية العالمية
+          </label>
+          <label for="subscribe">
+            <input type="checkbox" id="subscribe" />
+            أرغب في متابعة العروض والفعاليات الترفيهية
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">المتابعة إلى الدفع</button>
+      </form>
+    </div>
+  </main>
+<footer class="global-footer">
+  <div class="footer-top">
+    <p class="season-dates">
+      <span class="highlight">الموسم الـ30</span> | 15 أكتوبر 2025 - 10 مايو 2026
+    </p>
+    <p class="season-hours">
+      من <strong>الأحد إلى الأربعاء:</strong> 4:00 مساءً - 12:00 صباحاً |
+      <strong>من الخميس إلى السبت:</strong> 4:00 مساءً - 1:00 صباحاً
+      <br />
+      <span class="note">الثلاثاء مخصص للسيدات والعائلات، باستثناء الأيام الموافقة للعطلات الرسمية</span>
+    </p>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-column">
+      <h3>روابط سريعة</h3>
+      <ul>
+        <li>عن القرية العالمية</li>
+        <li>المدونة</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الشركات</h3>
+      <ul>
+        <li>بوابة الشركاء</li>
+        <li>للأعمال</li>
+        <li>لتجارة السفر</li>
+        <li>وسائل الإعلام</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الدعم</h3>
+      <ul>
+        <li>تواصل معنا</li>
+        <li>الشروط والأحكام</li>
+        <li>سياسة الخصوصية</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-line"></div>
+  <p class="footer-copy">© 2025 القرية العالمية. جميع الحقوق محفوظة.</p>
+</footer>
+<div class="cart-popup" id="cart-popup">
+  <span id="close-cart">&times;</span>
+  <div class="popup-header">
+    <h2>سلة المشتريات</h2>
+
+    <div class="popup-item">
+    
+
+      <div class="quantity-controls">
+        <button id="popup-minus" class="minus">−</button>
+        <span id="popup-count" class="count">1</span>
+        <button id="popup-plus" class="plus">+</button>
+      </div>
+
+        <p class="price-line">
+        30 <img src="images/dirham.png" alt="Dirham" class="dirham-icon"> × 1
+      </p>
+  <p class="ticket-name">تذكرة دخول أي يوم</p>
+    
+    </div>
+  </div>
+
+  <div class="total-line">
+    <span><span id="cart-total">30</span>  <class="dirham-icon"></span>
+    <strong>:المبلغ الإجمالي</strong>
+    
+  </div>
+
+  <div class="popup-buttons">
+    <button id="go-to-payment" class="btn-orange">تأكيد</button>
+  </div>
+</div>
+
+
+  <script src="paymentScript.js"></script>
+</body>
+</html>

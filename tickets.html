@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التذاكر | القرية العالمية</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="ticketStyle.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- =====================
+        HEADER SECTION
+  ====================== -->
+  <header class="global-header">
+    <div class="header-left">
+      <button id="menu-btn" class="menu-btn"><i class="fa fa-bars"></i></button>
+      <button class="header-btn partner-btn">انضموا إلى قائمة شركائنا</button>
+      
+    </div>
+
+    <div class="header-right">
+      <a href="#" class="icon-link"><i class="fa fa-shopping-cart"></i></a>
+      <div class="header-logo">
+        <img src="images/logo_ar.svg" alt="القرية العالمية" />
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================
+        NAVIGATION BAR
+  ====================== -->
+  <nav class="main-nav">
+  <ul>
+    <li>
+      <a href="#" data-target="entry-section">
+        <img src="images/gate1.png" alt="" class="nav-icon" />
+        <span>دخول القرية العالمية</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" data-target="entertainment-section">
+        <img src="images/malahi.png" alt="" class="nav-icon" />
+        <span>الفعاليات الترفيهية</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" data-target="recharge-section">
+        <img src="images/recharge1.png" alt="" class="nav-icon" />
+        <span>أعد التعبئة</span>
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+
+<!-- =======================
+     🎟️ TICKET RESERVE SECTION
+======================= -->
+<section id="entry-section" class="content-section active">
+  <div class="ticket-container">
+    <section class="ticket-reserve">
+      <!-- ========== تذكرة 1 ========== -->
+      <div class="ticket-card">
+        <div class="ticket-info">
+          <h2 class="reserve-title">حدد تذكرة الدخول</h2>
+          <p class="reserve-subtitle">
+            اختاروا تذكرة أيام الأسبوع بسعر 25 درهم (صالحة من الأحد إلى الخميس باستثناء أيام العطل الرسمية)
+          </p>
+          <div class="ticket-toggle">
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <h3>تذكرة دخول أي يوم</h3>
+          <p class="ticket-price">ابتداءً من <strong>30</strong> درهم <span>للشخص</span></p>
+        </div>
+
+        <div class="ticket-actions">
+          <div class="ticket-toggle">
+            <p class="toggle-text">(باستثناء أيام العطل الرسمية)</p>
+            <p class="ticket-price muted">
+              تذاكر مجانية (الأطفال / كبار السن / أصحاب الهمم) متضمنة الأطفال تحت عمر 3 سنوات، كبار السن فوق 65 سنة، وأصحاب الهمم.
+            </p>
+          </div>
+
+          <div class="ticket-counter">
+            <button class="minus">−</button>
+            <span class="count">0</span>
+            <button class="plus">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== BUTTON ========== -->
+      <button class="continue-btn">المتابعة للدفع</button>
+    </section>
+  </div>
+</section>
+
+<!-- =======================
+     🎡 ENTERTAINMENT SECTION
+======================= -->
+<section id="entertainment-section" class="content-section">
+  <div class="wonder-container">
+    <!-- Header directly on image -->
+    <div class="wonder-header">
+      <h2>احصلوا على بطاقة الروائع الآن واستمتعوا بكل الوجهات الترفيهية</h2>
+      <p>اكتشفوا كل الروائع ببطاقة الروائع</p>
+    </div>
+
+    <!-- Light blue card box -->
+    <div class="wonder-content">
+      <h3>اشتركوا الآن في باقة النقاط متعددة الاستخدامات</h3>
+      <p>احصلوا على عروض المكافآت الحصرية!</p>
+
+      <div class="wonder-cards">
+        <div class="wonder-card">
+          <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 150.00
+</p>
+
+          <p>نقطة متعددة الاستخدام (مضمنة %12 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 250.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %20 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+         <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 350.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %25 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 550.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %35 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 750.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %45 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 1000
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %55 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 1500
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %65 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+         
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- =======================
+     RECHARGE SECTION
+======================= -->
+
+
+<section id="recharge-section" class="content-section">
+  <div class="wonder-container">
+    <!-- Header directly on image -->
+   <div class="wonder-header">
+  <div class="wonder-header-text">
+    <h2>أضف رصيداً إلى بطاقة الروائع الخاصة بك الآن</h2>
+    <p>يرجى إدخال رقم بطاقتك المكون من 10 أرقام هنا لتعبئة الرصيد</p>
+  </div>
+
+  <div class="wonder-header-form">
+    <select class="wonder-select">
+      <option>أضف بطاقة وجهات ترفيهية</option>
+    </select>
+
+    <input type="text" placeholder="رقم البطاقة" class="wonder-input" />
+  </div>
+</div>
+
+    <!-- Light blue card box -->
+    <div class="wonder-content">
+     
+
+      <div class="wonder-cards">
+        <div class="wonder-card">
+          <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 150.00
+</p>
+
+          <p>نقطة متعددة الاستخدام (مضمنة %12 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 250.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %20 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+         <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 350.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %25 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 550.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %35 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 750.00
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %45 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 1000
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %55 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+        <div class="wonder-card">
+                    <p class="price">
+  <img src="images/Dirham.png" alt="Dirham" class="dirham-icon"> 1500
+</p>
+          <p>نقطة متعددة الاستخدام (مضمنة %65 نقاط إضافية للكرنفال)</p>
+          <button class="buy-btn">شراء</button>
+        </div>
+         
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     🎫 تذكرة الدخول SECTION
+===================== -->
+<section class="entry-ticket">
+  <div class="entry-content">
+    <h2 class="entry-title">تذكرة الدخول</h2>
+    <p class="entry-desc">
+      سعر تذكرة أي يوم 30 درهم إماراتي <br />
+      سعر تذكرة أيام الأسبوع 25 درهم إماراتي (صالحة من الأحد حتى الخميس باستثناء أيام العطل الرسمية).<br />
+      تذاكر دخول الوجهة صالحة للاستخدام مرة واحدة خلال الموسم 30 (الرجاء الانتباه أن أيام الثلاثاء مخصصة للعائلات والسيدات والأزواج).<br />
+      يرجى الاطلاع على التفاصيل لمزيد من المعلومات.
+    </p>
+
+    <div class="entry-images">
+      <img src="images/tickets1.jpg" alt="تذاكر الدخول" />
+      <img src="images/tickets1.jpg" alt="تذاكر الدخول" />
+    </div>
+
+    <h3 class="entry-subtitle">ماذا تتضمن التذكرة؟</h3>
+    <ul class="entry-list">
+      <li>تذكرة دخول الوجهة صالحة للاستخدام مرة واحدة خلال الموسم 30 (الرجاء الانتباه أن أيام الثلاثاء مخصصة للعائلات).</li>
+      <li>إمكانية زيارة 30 جناحاً حيث يمكنكم الاستمتاع بالكنوز الثقافية من مختلف بلدان العالم.</li>
+      <li>إمكانية الدخول إلى المنطقة الثقافية الإماراتية الأصيلة، التي سوف تأخذكم في رحلة عبر الزمن.</li>
+      <li>إمكانية حضور أكثر من 200 عرض مختلف يومياً!</li>
+      <li>إمكانية الدخول إلى مسرح الصغار وفرص كبيرة للمرح والاستمتاع التي تنتظر ضيوفنا الصغار.
+</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="entry-subtitle">بعض القواعد البسيطة لجعل الأمر ممتعًا للجميع.</h3>
+       <ul class="entry-list">
+      <li>يرجى الالتزام باللباس المحتشم </li>
+      <li>لا يسمح بإدخال الحيوانات الأليفة</li>
+      <li>يرجى تجنب التعبير عن الحميمية</li>
+      <li>يمنع التصوير بدون رخصة</li>
+      <li>يمنع استخدام السيجواي والسكوتر والدراجات الهوائية والهوفر بورد وألواح التزحلق وأحذية التزحلق</li>
+      <li>لا يُسمح بإدخال الكراسي والطاولات والسجاد داخل الوجهة</li>
+      <li>لا يسمح بإدخال الأطعمة لداخل الواجهة</li>
+
+
+    </ul>
+</div>
+</section>
+
+  <!-- =========================
+        FOOTER SECTION
+========================= -->
+<footer class="global-footer">
+  <div class="footer-top">
+    <p class="season-dates">
+      <span class="highlight">الموسم الـ30</span> | 15 أكتوبر 2025 - 10 مايو 2026
+    </p>
+    <p class="season-hours">
+      من <strong>الأحد إلى الأربعاء:</strong> 4:00 مساءً - 12:00 صباحاً |
+      <strong>من الخميس إلى السبت:</strong> 4:00 مساءً - 1:00 صباحاً
+      <br />
+      <span class="note">الثلاثاء مخصص للسيدات والعائلات، باستثناء الأيام الموافقة للعطلات الرسمية</span>
+    </p>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-column">
+      <h3>روابط سريعة</h3>
+      <ul>
+        <li>عن القرية العالمية</li>
+        <li>المدونة</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الشركات</h3>
+      <ul>
+        <li>بوابة الشركاء</li>
+        <li>للأعمال</li>
+        <li>لتجارة السفر</li>
+        <li>وسائل الإعلام</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الدعم</h3>
+      <ul>
+        <li>تواصل معنا</li>
+        <li>الشروط والأحكام</li>
+        <li>سياسة الخصوصية</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-line"></div>
+  <p class="footer-copy">© 2025 القرية العالمية. جميع الحقوق محفوظة.</p>
+</footer>
+
+
+  <!-- JS -->
+  <script src="ticketScript.js"></script>
+</body>
+</html>

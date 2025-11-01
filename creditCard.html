@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التذاكر | القرية العالمية</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="paymentStyle.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- =====================
+        HEADER SECTION
+  ====================== -->
+  <header class="global-header">
+    <div class="header-left">
+      <button id="menu-btn" class="menu-btn"><i class="fa fa-bars"></i></button>
+      <button class="header-btn partner-btn">انضموا إلى قائمة شركائنا</button>
+      
+    </div>
+
+    <div class="header-right">
+      <div class="header-logo">
+        <img src="images/logo_ar.svg" alt="القرية العالمية" />
+      </div>
+    </div>
+  </header>
+
+
+<!-- ==========================
+     PROGRESS BAR SECTION
+========================== -->
+<div class="progress-bar">
+  <div class="progress-step active">
+    <div class="icon"><i class="fa fa-user"></i></div>
+    <p>معلومات الضيف</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-shopping-cart"></i></div>
+    <p>تفاصيل المشتريات</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-credit-card"></i></div>
+    <p>تفاصيل الدفع</p>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="progress-step">
+    <div class="icon"><i class="fa fa-award"></i></div>
+    <p>التأكيد</p>
+  </div>
+</div>
+
+
+  <!-- ==========================
+       PAYMENT FORM
+  =========================== -->
+  <main class="payment-container">
+<section class="credit-card-box">
+  <h2 class="credit-title">السداد باستخدام بطاقة</h2>
+
+    <div class="cart-header">
+
+    <div class="payment-methods">
+      <img src="images/allCardd.png " alt="JCB" />
+      
+    </div>
+  </div>
+
+  <form id="credit-form" class="credit-form">
+    <!-- Card Number -->
+<label for="card-number">رقم بطاقة الدفع</label>
+<input type="text" id="card-number" placeholder="أدخل رقم البطاقة" maxlength="19" required />
+
+    <!-- Expiry Date -->
+    <label>تاريخ الصلاحية</label>
+    <div class="expiry-row">
+      <select id="expiry-month" required>
+        <option value="">تاريخ الصلاحية (الشهر)</option>
+        <option>01</option><option>02</option><option>03</option>
+        <option>04</option><option>05</option><option>06</option>
+        <option>07</option><option>08</option><option>09</option>
+        <option>10</option><option>11</option><option>12</option>
+      </select>
+
+      <select id="expiry-year" required>
+        <option value="">تاريخ الصلاحية (السنة)</option>
+        <option>2025</option><option>2026</option><option>2027</option>
+        <option>2028</option><option>2029</option><option>2030</option><option>2031</option>
+      </select>
+    </div>
+
+    <!-- CVV -->
+    <label for="cvv">رمز التحقق من البطاقة (CVV)</label>
+    <input type="text" id="cvv" placeholder="123" maxlength="3" required />
+
+    <!-- Cardholder Name -->
+    <label for="cardholder">Cardholder’s name</label>
+    <input type="text" id="cardholder" placeholder="الاسم واللقب" required />
+
+    <!-- Buttons -->
+    <div class="credit-actions">
+      <button type="button" class="back-btn">الخطوة السابقة</button>
+      <button type="submit" class="btn-pay">ادفع الآن</button>
+    </div>
+  </form>
+</section>
+
+  </main>
+<footer class="global-footer">
+  <div class="footer-top">
+    <p class="season-dates">
+      <span class="highlight">الموسم الـ30</span> | 15 أكتوبر 2025 - 10 مايو 2026
+    </p>
+    <p class="season-hours">
+      من <strong>الأحد إلى الأربعاء:</strong> 4:00 مساءً - 12:00 صباحاً |
+      <strong>من الخميس إلى السبت:</strong> 4:00 مساءً - 1:00 صباحاً
+      <br />
+      <span class="note">الثلاثاء مخصص للسيدات والعائلات، باستثناء الأيام الموافقة للعطلات الرسمية</span>
+    </p>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-column">
+      <h3>روابط سريعة</h3>
+      <ul>
+        <li>عن القرية العالمية</li>
+        <li>المدونة</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الشركات</h3>
+      <ul>
+        <li>بوابة الشركاء</li>
+        <li>للأعمال</li>
+        <li>لتجارة السفر</li>
+        <li>وسائل الإعلام</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>الدعم</h3>
+      <ul>
+        <li>تواصل معنا</li>
+        <li>الشروط والأحكام</li>
+        <li>سياسة الخصوصية</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-line"></div>
+  <p class="footer-copy">© 2025 القرية العالمية. جميع الحقوق محفوظة.</p>
+</footer>
+  <script src="paymentScript.js"></script>
+</body>
+</html>

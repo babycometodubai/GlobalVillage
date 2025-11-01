@@ -1,0 +1,1075 @@
+/* =========================
+   ✅ HEADER STYLING (LTR)
+========================= */
+.global-header {
+  direction: ltr;
+  background: linear-gradient(to right, #142850, #004d99);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  color: #fff;
+  font-family: 'Tajawal', sans-serif;
+  box-sizing: border-box;
+}
+
+/* ============ LEFT SECTION (menu + buttons) ============ */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Burger menu */
+.menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Partner + Ticket Buttons */
+.header-btn {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Orange "Tickets" button */
+.ticket-btn {
+  background: #ff6f00;
+  border-color: #ff6f00;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ============ RIGHT SECTION (cart + logo) ============ */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.header-right a:hover {
+  opacity: 0.8;
+}
+
+/* Logo */
+.header-logo img {
+  height: 60px;
+  display: block;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .global-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-right {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background: #004d99;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  .header-right.active {
+    display: flex;
+  }
+
+  .header-logo img {
+    height: 50px;
+  }
+}
+
+/* =========================
+   ✅ SECONDARY NAV BAR (icons above text + orange active)
+========================= */
+.main-nav {
+  background: #f0f0f0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.main-nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-nav ul li a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.main-nav ul li a:hover {
+  color: #0077b6;
+  transform: translateY(-3px);
+}
+
+.main-nav ul li a.active {
+  color: #f7931e; /* orange text only */
+  transform: scale(1.05);
+}
+
+/* make sure icon color doesn't change */
+.main-nav ul li a.active .nav-icon {
+  filter: none !important;
+  opacity: 1;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 6px;
+  object-fit: contain;
+  transition: filter 0.3s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: row; /* stay horizontal */
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  .nav-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =========================
+   🎟️ TICKET RESERVE SECTION
+========================= */
+
+
+.reserve-title {
+  font-size: 28px;
+  color: #142850;
+  margin-bottom: 10px;
+}
+
+.reserve-subtitle {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* ===== CARD BOXES ===== */
+.ticket-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+   /* ✅ Add this line */
+  margin-top: auto; 
+}
+
+.ticket-info h3 {
+  font-size: 20px;
+  color: #1a237e;
+  margin-bottom: 5px;
+}
+
+.ticket-price {
+  color: #555;
+  font-size: 16px;
+}
+
+.ticket-price strong {
+  color: #000;
+  font-size: 18px;
+}
+
+.ticket-price.muted {
+  color: #888;
+}
+
+/* ===== ACTION AREA ===== */
+.ticket-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ===== TOGGLE SWITCH ===== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff6f00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.toggle-text {
+  color: #555;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* ===== COUNTER ===== */
+.ticket-counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.ticket-counter button {
+  background: transparent;
+  border: 2px solid #ff6f00;
+  color: #ff6f00;
+  font-size: 22px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ticket-counter button:hover {
+  background: #ff6f00;
+  color: #fff;
+}
+
+.ticket-counter .count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ===== CONTINUE BUTTON ===== */
+.continue-btn {
+  background: #ff6f00;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.continue-btn:hover {
+  background: #e65c00;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .ticket-card {
+    padding: 20px;
+  }
+
+  .ticket-info h3 {
+    font-size: 18px;
+  }
+
+  .reserve-title {
+    font-size: 24px;
+  }
+
+  .ticket-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .continue-btn {
+    width: 100%;
+  }
+}
+
+/* =========================
+   🚫 RESET LINK STYLING INSIDE TICKET SECTION
+========================= */
+.ticket-reserve,
+.ticket-reserve * {
+  text-decoration: none !important;
+  cursor: default !important;
+  font-style: normal !important;
+  pointer-events: auto !important;
+}
+
+/* disable real anchor clicks if any accidentally exist */
+.ticket-reserve a {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+/* ===========================
+   🎟️ TICKET CONTAINER
+=========================== */
+/* Outer container (neutral background, just centers the card) */
+.ticket-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* reduced padding */
+  background: #f4f6fa; /* light neutral backdrop */
+  min-height: 70vh; /* reduced height from full screen */
+}
+
+/* Gradient INSIDE the white card */
+.ticket-container .ticket-reserve {
+  background: url("images/masjed1.jpeg") no-repeat center center / cover; 
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  width: 100%;
+  padding: 35px;
+  color: #1b1f2a;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 250px;
+}
+
+/* =========================
+   🎫 ENTRY TICKET SECTION
+========================= */
+.entry-ticket {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+  font-family: 'Tajawal', sans-serif;
+  text-align: right;
+  color: #142850;
+}
+
+.entry-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #142850;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.entry-desc {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.entry-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.entry-images img {
+  width: 46%;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.entry-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #142850;
+  margin-bottom: 20px;
+}
+
+.entry-list {
+  list-style-type: disc;
+  padding-right: 20px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.entry-list li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .entry-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entry-images img {
+    width: 90%;
+  }
+
+  .entry-title {
+    font-size: 26px;
+  }
+
+  .entry-subtitle {
+    font-size: 20px;
+  }
+}
+
+/* ===========================
+   🎟️ TICKET CARD
+=========================== */
+.ticket-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  /* Push to bottom of the container */
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* =========================
+        FOOTER STYLING
+========================= */
+.global-footer {
+  background: linear-gradient(to bottom, #0072bb, #0a2342);
+  color: #fff;
+  font-family: 'Tajawal', sans-serif;
+  direction: rtl;
+  text-align: right;
+  padding: 0;
+  margin-top: 0;
+}
+
+/* ===== TOP BAR (Season Dates & Hours) ===== */
+.footer-top {
+  background-color: #1a2b48;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-top .season-dates {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-top .highlight {
+  color: #fca311;
+  font-weight: 700;
+}
+
+.footer-top .season-hours {
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer-top .note {
+  color: #d3d3d3;
+  font-size: 14px;
+}
+
+/* ===== MAIN FOOTER CONTENT ===== */
+.footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 150px;
+  padding: 60px 20px 40px;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, #0072bb, #003366);
+}
+
+.footer-column {
+  text-align: center;
+  min-width: 160px;
+}
+
+.footer-column h3 {
+  color: #fca311;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: default;
+  transition: opacity 0.2s;
+}
+
+.footer-column li:hover {
+  opacity: 0.8;
+}
+
+/* ===== DIVIDER LINE ===== */
+.footer-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px auto;
+  width: 90%;
+}
+
+/* ===== COPYRIGHT ===== */
+.footer-copy {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .footer-main {
+    gap: 60px;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+  }
+
+  .footer-column li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-top .season-dates {
+    font-size: 18px;
+  }
+
+  .footer-top .season-hours {
+    font-size: 15px;
+  }
+}
+
+
+
+/* =========================
+   🎡 WONDERPASS SECTION
+========================= */
+.wonderpass-section {
+  background: linear-gradient(to bottom, #001f3f, #001533);
+  color: #fff;
+  border-radius: 24px;
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.wonderpass-banner h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wonderpass-banner p {
+  color: #cfd8dc;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.wonderpass-cards {
+  background: #e9f2ff;
+  border-radius: 20px;
+  padding: 40px 20px;
+  color: #142850;
+}
+
+.wonderpass-title {
+  font-size: 22px;
+  color: #142850;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.wonderpass-subtitle {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.wonderpass-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wonderpass-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  width: 180px;
+  transition: transform 0.3s;
+}
+
+.wonderpass-card:hover {
+  transform: translateY(-5px);
+}
+
+.wonderpass-card h4 {
+  font-size: 20px;
+  color: #142850;
+  margin-bottom: 8px;
+}
+
+.wonderpass-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Hide / show logic */
+.content-section {
+  display: none;
+}
+.content-section.active {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wonderpass-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .wonderpass-card {
+    width: 80%;
+  }
+}
+/* ============================================
+   ✅ SECTION VISIBILITY TOGGLING
+============================================ */
+.content-section {
+  display: none; /* hide all sections by default */
+  transition: all 0.3s ease-in-out;
+}
+
+.content-section.active {
+  display: block; /* show the selected one */
+}
+
+/* ============================================
+   🎟️ WONDER PASS BOX (Entertainment Section)
+============================================ */
+.wonder-pass-box {
+  background: linear-gradient(to bottom right, #eef5ff, #dfefff);
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Header part */
+.wonder-header h2 {
+  color: #0b2447;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.wonder-header p {
+  color: #2a3f66;
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+
+/* Content part */
+.wonder-content h3 {
+  color: #16213e;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.wonder-content p {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* Card container */
+.wonder-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Each card */
+.wonder-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.wonder-card:hover {
+  transform: translateY(-4px);
+}
+
+.wonder-card .price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+/* ===========================
+   🎡 WONDER PASS SECTION
+=========================== */
+/* ===========================
+   🎡 WONDER PASS SECTION
+=========================== */
+.wonder-container {
+  background: url("images/masjed1.jpeg") no-repeat center center / cover;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 100px auto 60px;
+  padding: 60px 40px;
+  font-family: 'Tajawal', sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+/* Header text on the image */
+.wonder-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.wonder-header h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.wonder-header p {
+  font-size: 18px;
+  color: #f5f5f5;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* The light blue cards section */
+.wonder-content {
+  background: rgba(240, 248, 255, 0.96);
+  border-radius: 20px;
+  padding: 40px 30px;
+  color: #222;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.wonder-content h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #0a3d62;
+}
+
+.wonder-content p {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Wonder cards grid */
+.wonder-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.wonder-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wonder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.wonder-card .price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #004d99;
+  margin-bottom: 8px;
+}
+/* ===========================
+   🟧 BUY BUTTON IN WONDER CARDS
+=========================== */
+.buy-btn {
+  background-color: #f7941d; /* same orange as continue button */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #e58310;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(247, 148, 29, 0.4);
+}
+/* ===========================
+   🌟 WONDER HEADER (Recharge Box)
+=========================== */
+.wonder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: transparent;
+  padding: 60px 80px;
+  color: #fff;
+  text-align: right;
+  gap: 30px;
+}
+
+.wonder-header-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wonder-header-text p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+.wonder-header-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 380px;
+}
+
+.wonder-select {
+  appearance: none;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #f7941d;
+  font-size: 18px;
+  padding: 14px 18px;
+  border-radius: 6px;
+  text-align: right;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23f7941d' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 16px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.wonder-select:focus {
+  outline: none;
+  border-color: #f7941d;
+}
+
+.wonder-input {
+  border: none;
+  background: #fff;
+  color: #333;
+  font-size: 18px;
+  padding: 14px 18px;
+  border-radius: 6px;
+  text-align: right;
+  width: 100%;
+}
+
+.wonder-input::placeholder {
+  color: #aaa;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .wonder-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+
+  .wonder-header-form {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-left {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+    order: 1; /* buttons below logo */
+  }
+
+  .nav-right {
+    order: 0; /* logo section first */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-outline,
+  .btn-orange,
+  .btn-cart {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+ .cart-icon {
+  width: 22px;
+  height: 22px;
+  background-color: #fff; /* ✅ same as page background */
+  border-radius: 50%;     /* optional: smooth edges */
+  padding: 2px;           /* optional: adds small breathing space */
+  filter: none;           /* remove color inversion */
+}
+}
+
+ .cart-icon {
+  width: 22px;
+  height: 22px;
+  background-color: #fff; /* ✅ same as page background */
+  border-radius: 50%;     /* optional: smooth edges */
+  padding: 2px;           /* optional: adds small breathing space */
+  filter: none;           /* remove color inversion */
+}
+
+.dirham-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 4px;
+  object-fit: contain;
+}

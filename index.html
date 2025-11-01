@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>القرية العالمية - الموسم 30</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Right Side: Buttons (now includes cart) -->
+      <div class="nav-left">
+        <button class="btn-outline">انضموا إلى قائمة شركائنا</button>
+        <button class="btn-orange">التذاكر</button>
+
+        <!-- 🛒 Cart Button -->
+        <button class="btn-cart" id="cart-btn" title="سلة المشتريات">
+          <img src="images/cart7.png" alt="Cart" class="cart-icon">
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+
+      <!-- Left Side: Logo, Text, and Ticket Box -->
+      <div class="nav-right">
+        <div class="logo-section">
+          <button id="menu-btn" class="menu-btn">☰</button>
+          <img src="images/logo_ar.svg" alt="Logo" class="logo">
+
+          <!-- Text under logo -->
+          <div class="logo-text">
+            <h1>الموسم 30</h1>
+            <p>اليوم من الساعة 4 عصراً حتى الساعة 12 بعد منتصف الليل</p>
+          </div>
+</nav>
+          <!-- Ticket Box -->
+          <div class="ticket-box">
+            <div class="ticket-header">
+              <h2>شراء تذاكر الدخول</h2>
+              <p class="ticket-subtext">ابتداءً من <span>25 درهم</span> للشخص</p>
+
+              <!-- New Weekday Ticket Option with Switch -->
+              <div class="weekday-option">
+                <label for="weekday-switch" class="weekday-label">
+                  اختاروا تذكرة أيام الأسبوع بسعر 25 درهم
+                  <span class="note">(صالحة من الأحد إلى الخميس باستثناء أيام العطل الرسمية)</span>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" id="weekday-switch" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Ticket Row with Counter -->
+            <div class="ticket-item">
+              <div class="ticket-label">تذكرة دخول أي يوم</div>
+              <div class="ticket-controls">
+                <button class="counter-btn minus">−</button>
+                <span class="ticket-count">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <div class="ticket-price">
+  30
+  <img src="images/dirham.png" alt="Dirham" class="dirham-icon">
+</div>
+
+            </div>
+
+            <!-- Free Entry Row -->
+            <div class="ticket-item free">
+              <div class="ticket-label">
+                تذاكر مجانية (الأطفال / كبار السن / أصحاب الهمم)
+              </div>
+            </div>
+
+            <button class="btn-orange full" id="add-to-cart">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+    
+
+    <!-- Welcome Section -->
+<section class="welcome-section">
+  <div class="container">
+    <div class="welcome-text">
+      <h2>مرحباً بكم في القرية العالمية</h2>
+      <p>
+        عالم بلا حدود تلتقي فيه أكثر من 90 ثقافة مختلفة من حول العالم لتشكل عالماً من الروائع.
+        عالم يضم في كل جزء من أجزائه تجارب جديدة ومشوقة، تندمج فيه الألوان والبراعة والنكهات المختلفة
+        لتشكل أروع تجمع ثقافي. مرحباً بك في عالم أكثر روعة.
+      </p>
+    </div>
+
+    <div class="events-text">
+      <h3>العروض والفعاليات القادمة</h3>
+      <p>تعدكم القرية العالمية بمفاجآت متجددة كل يوم.</p>
+    </div>
+  
+
+<!-- =====================
+     EVENTS SLIDER SECTION
+===================== -->
+<section class="events-slider">
+  <div class="slider-wrapper">
+    <button class="slider-btn prev">&#10094;</button>
+
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="slide">
+          <img src="images/europe.jpg" alt="عروض أوروبا">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>عروض أوروبا</h3>
+            <p>اكتشفوا سحر أوروبا في القرية العالمية واستمتعوا بالعروض المدهشة.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/gse.webp" alt="مسرح الأطفال">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>مسرح الأطفال</h3>
+            <p>متعة الصغار مع المسرح التفاعلي والعروض الممتعة طوال اليوم.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/japan.jpg" alt="العروض اليابانية">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>العروض اليابانية</h3>
+            <p>تجربة الثقافة اليابانية من خلال الرقص والموسيقى التقليدية.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/china.jpg" alt="العروض الصينية">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>العروض الصينية</h3>
+            <p>سحر الشرق في عروض الأكروبات والرقصات التقليدية.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/retumbar.jpg" alt="الرقص الهندي">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>الرقص الهندي</h3>
+            <p>مزيج الألوان والإيقاعات النابضة بالحياة من قلب الهند.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/tailand.jpg" alt="العروض العربية">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>العروض العربية</h3>
+            <p>تجربة الفن والموسيقى العربية الأصيلة من مختلف الدول.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/africa.jpg" alt="العروض الإفريقية">
+
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>العروض الإفريقية</h3>
+            <p>إيقاعات الطبول ورقصات الطقوس الإفريقية المذهلة.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/tailand.jpg" alt="عروض أمريكا">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>عروض أمريكا</h3>
+            <p>تجربة موسيقى الجاز والرقص الغربي بأسلوب عصري ممتع.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/musicalStaus.webp" alt="الكرنفال البرازيلي">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>الكرنفال البرازيلي</h3>
+            <p>ألوان مبهجة وأجواء كرنفالية من أمريكا الجنوبية.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/morocco.jpg" alt="عرض السحر">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>عرض السحر</h3>
+            <p>عروض خفة يد مذهلة ستبقيك في حالة من الدهشة!</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/africa.jpg" alt="عرض النار">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>عرض النار</h3>
+            <p>شجاعة ومهارة مبهرة في عرض النار المثير.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/gse.webp" alt="عرض السيرك">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>عرض السيرك</h3>
+            <p>أداء مذهل من أفضل فناني السيرك من حول العالم.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/bgMax.jpg" alt="الحدث الختامي">
+           <div class="event-info">
+    <span class="event-date">الخميس، 5 نوفمبر</span>
+    <span class="dot">•</span>
+    <span class="event-time">الساعة 7:00 مساءً</span>
+    <span class="dot">•</span>
+    <span class="event-location">المنطقة الأوروبية</span>
+  </div>
+          <div class="slide-text">
+            <h3>الحدث الختامي الكبير</h3>
+            <p>لا تفوتوا العرض النهائي الذي يجمع جميع الثقافات في لحظة مدهشة!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="slider-btn next">&#10095;</button>
+  </div>
+</section>
+
+    <div class="events-text">
+      <h3>توقع عالماً أكثر روعة مرة أخرى في القرية العالمية!</h3>
+      <p>في القرية العالمية يجتمع كل العالم معاً بأفضل وسائل الترفيه، والتسوق، وتناول المأكولات الشهية، ومناطق الجذب الساحرة طوال الموسم! ويمكنكم أن تكتشفوا عالماً رائعاً في كل مرة تزورها للاستمتاع بالثقافات والعروض وألذ الأطعمة والمأكولات.
+</p>
+    </div>
+
+  <section class="categories-bar">
+  <div class="category-card blue">
+    <img src="images/events.webp" alt="العروض والفعاليات">
+    <div class="category-title">العروض والفعاليات</div>
+  </div>
+
+  <div class="category-card green">
+    <img src="images/pavilions.webp" alt="الأجنحة وأماكن التصوير">
+    <div class="category-title">الأجنحة وأماكن التصوير</div>
+  </div>
+
+  <div class="category-card orange">
+    <img src="images/food.webp" alt="أذى المأكولات">
+    <div class="category-title">أذى المأكولات</div>
+  </div>
+
+  <div class="category-card red">
+    <img src="images/carnaval.webp" alt="الكرنفال">
+    <div class="category-title">الكرنفال</div>
+  </div>
+
+  <div class="category-card dark-red">
+    <img src="images/planet.jpg" alt="إكسو بلانيت سيتي">
+    <div class="category-title">إكسو بلانيت سيتي</div>
+  </div>
+</section>
+
+    <div class="events-text">
+      <h3>روائع الأسبوع</h3>
+      <p>ما الجديد في القرية العالمية؟ استكشف معنا العروض والفعاليات المميزة المختلفة وغيرها الكثير من المفاجئات، تابعونا حتى لا تفوتكم روائع الأسبوع
+</p>
+</div>
+
+  <section class="categories-bar">
+  <div class="category-card blue">
+    <img src="images/thirtyYear.jpg" alt="العروض والفعاليات">
+    <div class="category-title">العروض والفعاليات</div>
+  </div>
+
+  <div class="category-card green">
+    <img src="images/dragon.jpg" alt="الأجنحة وأماكن التصوير">
+    <div class="category-title">الأجنحة وأماكن التصوير</div>
+  </div>
+
+  <div class="category-card orange">
+    <img src="images/dubaiDream.jpg" alt="أذى المأكولات">
+    <div class="category-title">أذى المأكولات</div>
+  </div>
+
+  <div class="category-card red">
+    <img src="images/dubaiSport.jpg" alt="الكرنفال">
+    <div class="category-title">الكرنفال</div>
+  </div>
+
+  <div class="category-card dark-red">
+    <img src="images/horror.jpg" alt="إكسو بلانيت سيتي">
+    <div class="category-title">إكسو بلانيت سيتي</div>
+  </div>
+
+   <div class="category-card dark-red">
+    <img src="images/dubaiSport.jpg" alt="إكسو بلانيت سيتي">
+    <div class="category-title">إكسو بلانيت سيتي</div>
+  </div>
+
+   <div class="category-card dark-red">
+    <img src="images/passport.jpg" alt="إكسو بلانيت سيتي">
+    <div class="category-title">إكسو بلانيت سيتي</div>
+  </div>
+</section>
+
+<section class="weekly-hero">
+  <div class="weekly-hero-content">
+
+      <div class="weekly-image">
+      <img src="images/wondered.webp" alt="الرحالة">
+    </div>  
+    <div class="weekly-text">
+      <h2>تعرّفوا على الرُحّالة</h2>
+      <a href="payment.html" class="weekly-btn">انضمّ إلى المغامرة</a>
+    </div>
+  </div>
+</section>
+
+    <div class="events-text">
+      <h3>القرية العالمية، عالم أكثر روعة! </h3>
+<p>في القرية العالمية نحتفل بالتنوع الثقافي والإبداعات العالمية من كل مكان وهذا التنوع والإبداع هو ما يجعل عالمنا أكثر روعة! ولهذا في كل موسم نقوم بدعوة أفضل الفنانين وأكثر المبدعين من مختلف أنحاء العالم للإنضمام إلينا في دبي ليشاركوا مواهبهم وعروضهم المميزة يومياً مع ضيوفنا الكرام!
+</p>
+</div>
+
+
+<section class="traveler-section">
+  <img src="images/map.png" alt="الرحالة" class="traveler-full-img">
+</section>
+
+
+    <div class="events-text">
+      <h3>خططوا لزيارتكم</h3>
+<p>تجدون هنا كل ما تحتاجونه لتجعلوا من زيارتكم إلى القرية العالمية في دبي رحلة رائعة، من مواعيد القرية العالمية، ووصولاً إلى خدمات الضيوف وخيارات التنقل المختلفة</p>
+</div>
+
+<section class="weekly-events">
+  <div class="slider-wrapper">
+
+    <div class="slider-container">
+      <div class="slider-track">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="images/pink.jpg" alt="عروض أوروبا">
+      
+          <div class="slide-text">
+            <h3>عروض أوروبا</h3>
+            <p>اكتشفوا سحر أوروبا في القرية العالمية واستمتعوا بالعروض المدهشة.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="images/roadMap.webp" alt="العروض اليابانية">
+         
+          <div class="slide-text">
+            <h3>العروض اليابانية</h3>
+            <p>تجربة الثقافة اليابانية من خلال الرقص والموسيقى التقليدية.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="images/kidGirl.jpg" alt="العروض الإفريقية">
+
+          <div class="slide-text">
+            <h3>العروض الإفريقية</h3>
+            <p>إيقاعات الطبول ورقصات الطقوس الإفريقية المذهلة.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="height: 40px;"></div>
+
+<section class="weekly-hero">
+  <div class="weekly-hero-content">
+
+      <div class="weekly-image">
+      <img src="images/iphone.png" alt="الرحالة">
+    </div>  
+    <div class="weekly-text">
+      <h2>استمتعوا بزيارتكم – وحمّلوا تطبيق القرية العالمية</h2>
+<h1 style="color: #918787;">اكتشفوا الأجنحة الرائعة، واستمتعوا بالألعاب المذهلة، وتذوقوا أشهى المأكولات العالمية، وشاهدوا مخنلف العروض ترفيهية العالمية التي تُحيي روح المغامرة والإبداع وتصوّر لكم العالم بطريقة جديدة
+</h1>
+
+    </div>
+  </div>
+</section>
+<div style="height: 20px;"></div>
+    </div>
+  </div>
+
+  <footer class="global-footer">
+  <div class="footer-top">
+    <p class="season-info">
+      <span class="highlight">الموسم الـ30</span> | 15 أكتوبر 2025 - 10 مايو 2026
+      <br>
+      من الأحد إلى الأربعاء: <strong>4:00 مساءً - 12:00 صباحاً</strong> |
+      من الخميس إلى السبت: <strong>4:00 مساءً - 1:00 صباحاً</strong>
+      <br>
+      الثلاثاء مخصص للسيدات والعائلات، باستثناء الأيام الموافقة للعطلات الرسمية
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-columns">
+
+      <div class="footer-col">
+        <h4>الدعم</h4>
+        <ul>
+          <li><a href="#">تواصلوا معنا</a></li>
+          <li><a href="#">الشروط والأحكام</a></li>
+          <li><a href="#">سياسة الخصوصية</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>الشركات</h4>
+        <ul>
+          <li><a href="#">بوابة الشركاء</a></li>
+          <li><a href="#">للأعمال</a></li>
+          <li><a href="#">لتجارة السفر</a></li>
+          <li><a href="#">وسائل الإعلام</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#">عن القرية العالمية</a></li>
+          <li><a href="#">المدونة</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <p class="footer-copy">© 2025 القرية العالمية. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+  </header>
+
+
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+  </section>
+
+  <!-- Cart Popup -->
+  <div id="cart-popup" class="cart-popup hidden">
+    <div class="cart-content">
+      <div class="cart-header">
+        <span class="cart-title">تذكرة دخول أي يوم</span>
+        <button id="close-cart" class="close-cart">إخفاء التفاصيل</button>
+      </div>
+
+      <!-- Weekday Switch inside Popup -->
+      <div class="weekday-option-cart">
+        <label for="weekday-switch-cart" class="weekday-label">
+          اختاروا تذكرة أيام الأسبوع بسعر 25 درهم
+          <span class="note">(صالحة من الأحد إلى الخميس باستثناء أيام العطل الرسمية)</span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="weekday-switch-cart" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="cart-body">
+        <div class="cart-row">
+          <span class="price cart-ticket-price">
+  30 <img src="images/dirham.png" alt="Dirham" class="dirham-icon" />
+</span>
+
+        </div>
+
+        <div class="cart-controls">
+          <button class="popup-btn plus">+</button>
+          <span id="popup-count">1</span>
+          <button class="popup-btn minus">−</button>
+        </div>
+
+        <hr />
+
+        <div class="cart-total">
+          <span>المبلغ الإجمالي:</span>
+          <strong id="popup-total">
+  30 <img src="images/dirham.png" alt="Dirham" class="dirham-icon" />
+</strong>
+
+        </div>
+      </div>
+
+      <div class="cart-actions">
+        <button class="btn-orange checkout">توجه للدفع</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
