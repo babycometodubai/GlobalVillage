@@ -1073,3 +1073,31 @@ input:checked + .slider:before {
   margin-left: 4px;
   object-fit: contain;
 }
+
+@media (max-width: 600px) {
+  #recharge-section {
+    padding: 40px 15px;
+  }
+
+  .wonder-card {
+    padding: 20px;
+  }
+
+  .wonder-card .price {
+    font-size: 20px;
+  }
+
+  .buy-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .wonder-header {
+    padding: 30px 18px;
+  }
+
+  .wonder-select,
+  .wonder-input {
+    width: 100%;
+  }
+}
