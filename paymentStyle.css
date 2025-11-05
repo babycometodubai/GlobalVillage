@@ -121,12 +121,17 @@ html {
   font-size: 26px;
   color: #1b2c6b;
   margin-bottom: 10px;
+  direction: ltr;      /* force left-to-right text direction */
+  text-align: left;    /* ensure it’s aligned to the left */
 }
 
 .form-subtitle {
   color: #666;
   margin-bottom: 30px;
+  direction: ltr;      /* force left-to-right text direction */
+  text-align: left;    /* align text to the left */
 }
+
 
 /* ================================
    🧩 FORM GRID LAYOUT
@@ -155,6 +160,29 @@ html {
   border-radius: 10px;
   font-size: 16px;
   background: #f9f9f9;
+}
+
+/* ✅ Responsive support for smaller screens */
+@media (max-width: 480px) {
+  .form-group label {
+    font-size: 14px;      /* smaller labels */
+    margin-bottom: 4px;   /* tighter spacing */
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 14px;      /* smaller text for better fit */
+    padding: 8px 10px;    /* reduce padding to save space */
+    border-radius: 8px;   /* slightly smaller corners */
+  }
+}
+
+@media (max-width: 360px) {
+  .form-group input,
+  .form-group select {
+    font-size: 13px;
+    padding: 7px 8px;
+  }
 }
 
 /* ================================
@@ -219,6 +247,29 @@ html {
   }
   .payment-box {
     padding: 30px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-box {
+    padding: 20px 15px;   /* reduce inner space */
+    border-radius: 15px;  /* slightly smaller corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .form-grid {
+    gap: 12px;            /* reduce spacing between form fields */
+  }
+
+  .payment-box h2,
+  .payment-box label {
+    font-size: 0.9rem;    /* smaller text for compact fit */
+  }
+
+  .payment-box input,
+  .payment-box select {
+    font-size: 0.95rem;
+    padding: 10px;
   }
 }
 
