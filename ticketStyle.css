@@ -1098,6 +1098,6 @@ input:checked + .slider:before {
 
   .wonder-select,
   .wonder-input {
-    width: 100%;
+    width: 50%;
   }
 }
