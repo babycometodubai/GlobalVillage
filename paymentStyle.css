@@ -307,30 +307,54 @@ body {
 /* ================================
    📱 SMALL SCREEN OPTIMIZATION
 ================================ */
+/* =========================================
+   📱 iPhone & Small-Screen Fixes
+========================================= */
 @media (max-width: 480px) {
-  .payment-box {
-    padding: 25px 20px;
-    border-radius: 15px;
+
+  /* ✅ Make all form groups consistent */
+  .form-grid .form-group {
+    margin-bottom: 16px;
   }
 
-  .form-title {
-    font-size: 22px;
-  }
-
-  .form-subtitle {
-    font-size: 14px;
+  /* ✅ Email + Name fields spacing & height */
+  .form-group input[type="email"],
+  .form-group input[type="text"] {
+    font-size: 15px;
+    padding: 12px 14px;
+    height: 50px;                  /* same height for both */
+    line-height: 1.4;
+    border-radius: 10px;
   }
 
   .form-group label {
     font-size: 14px;
+    margin-bottom: 6px;
   }
 
-  .form-group input,
-  .form-group select {
-    font-size: 14px;
-    padding: 10px 12px;
+  /* ✅ Continue button — full width & centered */
+  .submit-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 12px;
+    margin-top: 28px;
+    background: #ff6600;
+  }
+
+  .submit-btn:hover {
+    background: #e45b00;
+  }
+
+  /* ✅ Add balanced padding to the form box */
+  .payment-box {
+    padding: 28px 18px;
   }
 }
+
 
 @media (max-width: 360px) {
   .form-group input,
